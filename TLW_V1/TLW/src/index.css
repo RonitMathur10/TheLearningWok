@@ -68,3 +68,126 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Header Styling */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 0;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+
+.main-nav {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f0f0f0;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1024px) {
+  .main-nav {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .logo {
+    font-size: 1.25rem;
+  }
+  
+  .top-bar {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav {
+    padding: 0.75rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+    font-size: 14px;
+  }
+  
+  .logo {
+    font-size: 1.1rem;
+  }
+  
+  .top-bar {
+    font-size: 11px;
+    padding: 4px 0;
+  }
+}
+
+/* Mobile-first responsive utilities */
+@media (max-width: 640px) {
+  /* Ensure proper spacing for mobile */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Improve touch targets */
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better text readability on mobile */
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}

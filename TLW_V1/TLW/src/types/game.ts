@@ -8,6 +8,6 @@ export interface Question {
 }
 
 export interface CreateFormProps {
-    questionInput: any;
+    questionInput: Question;
     index: number;
 }
